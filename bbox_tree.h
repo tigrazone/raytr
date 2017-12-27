@@ -59,13 +59,18 @@ protected:
 public:
 	BBoxTree (vector<Primitive*> primitives)
 	{
+		printf("BBoxTree start... ");
+		printf("\nprimitives: %ld\n", (long) primitives.size());
 		for (auto p: primitives) all_prims_.push_back(p);
 		glob_ = BBox::Min();
 		for (auto p: all_prims_) glob_.merge_with(p->GetBBox());
+		printf("Build_... ");
 		Build_(0, &all_prims_[0], (uint32_t)all_prims_.size(), glob_, 0);
+		printf("Build_ done... ");
 		B = &B_container_[0];
 		prims = &prims_container_[0];
 		// all_prims_.clear();
+		printf("BBoxTree done\n");
 	}
 
 	virtual Maybe<Collision> Get (const Ray &r) const override

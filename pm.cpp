@@ -444,7 +444,7 @@ void PM::PPPM ()
 				++counter;
 				if (counter % 10000 == 1)
 				{
-					cerr << "\rTree querying: " << counter;
+					cerr << "\rTree querying: " << counter << " ";
 				}
 				PMRay &ray = *i;
 				PMPixel *pixel = ray.pixel;
@@ -512,7 +512,8 @@ void PM::PPM ()
 	_PreSampleRays(&rand_datum[0], n_threads_, n_rays_);
 	EmitRays(n_threads_);
 
-	for (int round = 0; round < n_rounds_; ++round)
+	//for (int round = 0; round < n_rounds_; ++round)
+	for (int round = start_round_; round < n_rounds_; ++round)
 	{
 		for (int x = 0; x < width_; ++x)
 			for (int y = 0; y < height_; ++y)
@@ -531,7 +532,7 @@ void PM::PPM ()
 				++counter;
 				if (urand(rd) < 0.001)
 				{
-					cerr << "\rTree querying: " << counter;
+					cerr << "\rTree querying: " << counter << " ";
 				}
 				PMRay &ray = *i;
 				PMPixel *pixel = ray.pixel;

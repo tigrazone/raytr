@@ -8,6 +8,8 @@
 #include "common.h"
 #include "spectrum.h"
 
+typedef unsigned char u_char;
+
 #include <thread>
 
 // #define NO_CV

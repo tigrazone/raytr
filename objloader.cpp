@@ -273,7 +273,8 @@ int LoadMesh (const string &objPath,
 			auto Vc = vertices[c];
 			if ((Va - Vb).cross(Vc - Va).norm() < eps)
 			{
-				cerr << "Degenerated triangle found\n";
+				cerr << "*DT ";
+				//cerr << "Degenerated triangle found\n";
 				continue;
 			}
 			tri = new Triangle(
@@ -295,6 +296,8 @@ int LoadMesh (const string &objPath,
 
 			prims.push_back(tri);
 		}
+		
+		printf("\n");
 	}
 
 }

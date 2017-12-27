@@ -48,13 +48,19 @@ void PPM (const json &j)
 
 	omp_set_num_threads(params.n_threads);
 	Scene scene = Scene::Load(j);
-	Image image(scene.Width() * 2, scene.Height(), "tmp/ph_last", params.display);
+	Image image(scene.Width() * 2, scene.Height(), (std::string("ph_last_") + j.at("pm_params").at("algo").get<string>()).c_str(), params.display);
 	PM pm(scene, image, params);
 
 	if (j.at("pm_params").at("algo").get<string>() == "ppm")
+	{
+		printf("algo: PPM\n");
 		pm.PPM();
+	}
 	else
+	{
+		printf("algo: probabilistic PPM\n");
 		pm.PPPM();
+	}
 
 	image.Show();
 	image.Dump(-1);
@@ -68,7 +74,7 @@ void PT (const json &j)
 
 	omp_set_num_threads(params.n_threads);
 	Scene scene = Scene::Load(j);
-	Image image(scene.Width() * 2, scene.Height(), "tmp/im_last", params.display);
+	Image image(scene.Width() * 2, scene.Height(), "im_last", params.display);
 	PathTracer pathTracer(scene, image, params);
 
 	Ray ray;
