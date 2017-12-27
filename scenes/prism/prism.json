@@ -1,0 +1,38 @@
+{
+  "camera": {
+    "Oimg": [0, 1, 1.5],
+    "O": [0, 1, 4.36],
+    "aperture": 0,
+    "fod": 1,
+	"aperture_act": 0.025,
+	"fod_act": 0.035,
+    "I": [1, 0, 0],
+    "J": [0, 1, 0],
+    "cameraWindow": [-1, 1.67, -1, 1]
+  },
+  "w": 1600,
+  "h": 1200,
+  "obj_model": "prism.obj",
+  "obj_mod": {
+	  "light": {
+		  "ldrange": [[1, 0, 0], [0, 1, 0]],
+		  "excluded": 1
+	  }
+  },
+  "objects": [
+	  {
+		  "t": "rectangle",
+		  "ldrange": [[1, 0, 0], [0, 1, 0]],
+		  "N": [1, 0, 0],
+		  "A": [[0, 1, 0], 0, 1.2],
+		  "B": [[0, 0, 1], -0.004, 0.062],
+		  "a": 0.99,
+		  "surface": {
+			  "diffusion": {"v": 0},
+			  "specular": 0, 
+			  "emission": {"v": 30}, 
+			  "p_diffusion": 0
+		  }
+	  }
+  ]
+}

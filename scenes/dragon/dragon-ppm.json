@@ -1,0 +1,35 @@
+{
+  "camera": {
+    "Oimg": [0, 0.8, 1],
+    "O": [0, 0.8, 3.86],
+    "aperture": 0,
+    "fod": 1,
+    "aperture_act": 0.025,
+    "fod_act": 0.035,
+    "I": [1, 0, 0],
+    "J": [0, 1, 0],
+    "cameraWindow": [-1, 1, -0.8, 0.79]
+  },
+  "w": 2000,
+  "h": 1600,
+  "interpolate_normal": 1,
+  "pm_params": {
+    "algo": "ppm",
+    "n_threads": 2,
+    "start_round": 500,
+    "n_rounds": 505,
+    "max_depth": 11,
+    "ray_max_depth": 11,
+    "n_rays": 6000000,
+    "photons_per_round": 6000000,
+    "R0": 0.01
+  },
+  "obj_model": "dragon.obj",
+  "obj_mod": {
+    "leftSphere": {"excluded": 1},
+    "water": {
+      "Tf": [[2, 0, 0, 0], [0, 0.5, 0, 0.8], [0, 0, 2, 0], [0, 0, 0, 1]],
+      "re_interpolate": 1
+    }
+  }
+}
