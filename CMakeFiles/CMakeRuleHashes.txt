@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+e369115fd12ce3e167aeb3f584a3cb27 raytr_pch/stdafx.h
+52240148a85f20c946df4889fee31145 raytr_pch/stdafx.h.gch/.c++

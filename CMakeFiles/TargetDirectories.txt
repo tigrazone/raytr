@@ -1,0 +1,3 @@
+C:/msys64/home/thr/raytr-master/CMakeFiles/raytr.dir
+C:/msys64/home/thr/raytr-master/CMakeFiles/edit_cache.dir
+C:/msys64/home/thr/raytr-master/CMakeFiles/rebuild_cache.dir
